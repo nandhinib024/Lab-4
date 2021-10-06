@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA  Calculator</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #box{
+            width:60%;
+            height:100%;
+        }
+        #para{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            text-align: center;
+            font-weight: bold;
+            color:#0d344b;
+        }
+        
+        button{
+   
+   width: 20%;
+   height: 35px;
+   padding: 0px;
+   margin: 15px ;
+   margin-left:-150px;
+   border-width: 3px;
+   border-radius: 7.5px;
+   border-style: solid;
+   background-color:gainsboro;
+       
+   
+   }
+   .btn {
+       
+       width: 500px;
+       padding: 0px;
+       display: inline-block;
+       margin: 0 auto;
+       text-align:center;
+     }
+
+     body{
+    background-color: #ccffff ;
+   
+    /*background-image: url(https://static.vecteezy.com/system/resources/previews/002/296/625/non_2x/calculator-on-a-blue-background-photo.jpg);*/
+    
+}
+#box
+{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 45%;
+    padding:0px;
+    height:40%;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/296/625/non_2x/calculator-on-a-blue-background-photo.jpg);
+    background-size: 100%;
+    background-repeat:cover ;
+}
+    </style>
+
+    
+    <script src="cgpa.js"></script>
+</head>
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-light "style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;  ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="padding-left:10px;padding-right:250px; color:#0d344b ;"><b>CGPA Calculator</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://nandhinib024.github.io/Lab-4-2/"  style="padding-left:10px;padding-right:250px; color:#0d344b ;"><b>GPA Calculator</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://nandhinib024.github.io/Lab-1-1/"  style="padding-left:10px;padding-right:200px; color:#0d344b ;"><b>EB Calculator</b></a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" href="https://nandhinib024.github.io/Lab-4-3/"  style="padding-left:10px;padding-right:00px; color:#0d344b ;"><b>Currency Converter</b></a>
+              </li></ul>
+           
+             
+</div>
+        </div>
+      </nav><br>
+    
+    <div class=" container " id="box">
+        <p id="para">
+            CGPA CALCULATOR   
+        </p><br>
+
+        <div class="row">
+           
+            <div class="col-md-6 " >
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 20px;">SEMESTER</p>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group" >
+                    
+                    <select  name="semester" id="semester" class="form-control" onchange="sem()" required >
+                        <option value="0"> Select</option>
+                        <option value="1">I Semester</option>
+                        <option value="2">II Semester</option>
+                        <option value="3">III Semester</option>
+                        <option value="4">IV Semester</option>
+                        <option value="5">V Semester</option>
+                        <option value="6">VI Semester</option>
+                        <option value="7">VII Semester</option>
+                        <option value="8">VIII Semester</option>
+                    </select><br>
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-md-6" id="sem1">
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 20px;">I Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem1">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 1st GPA "   id="sem11" class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem2">
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 20px;">II Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem2">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 2nd GPA " id="sem22" class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem3">
+                <p class="ml-5 text-center text-dark font-weight-bold" style="font-size: 20px;">III Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem3">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 3rd GPA " id="sem33" class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem4">
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 20px;">IV Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem4">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 4th GPA "  id="sem44" class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem5">
+                <p class="ml-5 text-center text-dark  font-weight-bold" style="font-size: 20px;">V Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem5">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 5th GPA "  id="sem55"class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem6">
+                <p class="ml-5 text-center text-dark font-weight-bold" style="font-size: 20px;">VI Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem6">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 6th GPA "  id="sem66"class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem7">
+                <p class="ml-5 text-center text-dark font-weight-bold" style="font-size: 20px;">VII Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem7">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 7th GPA "  id="sem77"class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="sem8">
+                <p class="ml-5 text-center text-dark font-weight-bold " style="font-size: 20px;">VII Semester GPA :</p>
+            </div>
+            <div class="col-md-3" id ="getsem8">
+                <form  action="">
+                    <input type="number" placeholder="Enter your 8th GPA "  id="sem88"class="form-control form-control-sm">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div  class="btn   mt-2 " >
+                <button type="button" onclick="calc()">CALCULATE</button>
+                    </div>
+            </div>
+            
+        </div>
+        <br>
+
+        
+
+          <div class="row">
+            <div class="col-md-6" >
+                <p class="ml-5 text-center text-dark font-weight-bold" style="font-size: 20px;">Your CGPA is  : </p>
+            </div>
+            <div class="col-md-3" >
+                <p id="ans" class="col-md-3  font-weight-bold " style="font-size: 20px;" > </p>
+            </div>
+         <br>
+        
+        
+        
+        
+
+    </div>
+</body>
+</html>
